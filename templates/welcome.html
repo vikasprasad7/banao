@@ -1,0 +1,7 @@
+<!-- welcome.html -->
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Welcome {{ user.role|capfirst }} {{ user.username }}!</h1>
+    <p>Logged in as: {{ user.email }}</p>
+    <p>Your session will expire in 5 minutes of inactivity.</p>
+{% endblock %}
