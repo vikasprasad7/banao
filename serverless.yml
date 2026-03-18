@@ -1,0 +1,16 @@
+service: healthcare-email-service
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  sendEmail:
+    handler: handler.send_email
+    events:
+      - http:
+          path: sendEmail
+          method: post
